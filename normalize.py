@@ -17,7 +17,7 @@ def normalize(name):
     translate_name = re.sub(r'\W', '_', name.translate(TRANS))
     # Замінюємо підкреслення '.' перед розширеннями, аби все читалось
     translate_name = re.sub(r'_([a-zA-Z0-9]+)$', r'.\1', translate_name)
-    return translate_name  
+    return translate_name
 
     
 
