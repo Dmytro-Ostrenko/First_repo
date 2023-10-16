@@ -82,7 +82,7 @@ def scan(folder: Path):
                 ext_reg.append(full_name)
                 EXTENSIONS.add(extension)
             except KeyError:
-                UNKNOWN.add(extension)  # .mp4, .mov, .avi
+                UNKNOWN.add(extension)  
                 MY_OTHER.append(full_name)
 
 if __name__ == '__main__':
