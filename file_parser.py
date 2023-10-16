@@ -66,7 +66,7 @@ def scan(folder: Path):
     for item in folder.iterdir():
         # Робота з папкою
         if item.is_dir():  # перевіряємо чи обєкт папка
-            if item.name not in ('archives', 'video', 'audio', 'documents', 'images', 'MY_OTHER'):
+            if item.name not in ('archives', 'video', 'audio', 'documents', 'images', 'My_other_files'):
                 FOLDERS.append(item)
                 scan(item)
             continue
@@ -78,7 +78,6 @@ def scan(folder: Path):
             MY_OTHER.append(full_name)
         else:
             try:
-                
                 ext_reg = REGISTER_EXTENSION[extension]
                 ext_reg.append(full_name)
                 EXTENSIONS.add(extension)
@@ -116,6 +115,7 @@ if __name__ == '__main__':
 
     print(f'EXTENSIONS: {EXTENSIONS}')
     print(f'UNKNOWN: {UNKNOWN}')
+    print(f'FOLDERS: {FOLDERS}')
 
 
 

@@ -77,11 +77,11 @@ def main(folder: Path):
         handle_other(file, folder / 'My_other_files')
         
     for file in file_parser.GZ_ARCHIVES:
-        handle_archive(file, folder / 'ARCHIVES'/'GZ')
+        handle_archive(file, folder / 'archives'/'GZ')
     for file in file_parser.AMR_ARCHIVES:
-        handle_archive(file, folder / 'ARCHIVES'/ 'AMR')
+        handle_archive(file, folder / 'archives'/ 'AMR')
     for file in file_parser.ZIP_ARCHIVES:
-        handle_archive(file, folder / 'ARCHIVES'/ 'ZIP')
+        handle_archive(file, folder / 'archives'/ 'ZIP')
     
  
     for folder in file_parser.FOLDERS[::-1]:
